@@ -1,0 +1,30 @@
+<div class="footer">  
+  <div class="container">
+    <h1>Social Stock Watching with Monitaur.</h1>
+    <div class="banner-badge">
+      <span class="monitaur-badge"></span>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <highchart id="chart-container" config="$ctrl.chart"></highchart>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="stock-holder col-md-4 col-lg-4 col-sm-6" ng-repeat="stock in $ctrl.chart.series track by $index">
+        <div class="stock-info" ng-style="{'border-color': stock.color}">{{stock.name.toUpperCase()}}<button type="button" class="close" ng-click="$ctrl.deleteStock(stock)">&times;</button></div>
+      </div>
+    </div>
+  </div>
+
+  <form class="thing-form" ng-submit="$ctrl.addStock($ctrl.newStock)">
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="$ctrl.newStock">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary">Add New</button>
+      </span>
+    </p>
+  </form>
+</div>

@@ -1,0 +1,53 @@
+#banner {
+  border-bottom: none;
+  margin-top: -20px;
+}
+
+#banner h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+#chart{
+  height: 500px;
+}
+
+.stock-holder{
+  padding: 5px;
+  margin-bottom: 25px;
+  .stock-info{
+    list-style: none!important;
+    border-left: 5px solid white;
+    height: 75px;
+    line-height: 75px;
+    padding-left: 25px;
+    font-weight: bolder;
+    color: #373737;
+    //text-shadow: 0 0 1px #222;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+    button{
+      height: 75px;
+      width: 25px;
+    }
+    &:hover{
+      //border-left: 10px solid white;
+      transform: translate(0, -5px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+  }
+}
+
+.input-group-addon, .input-group-btn, .input-group .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  //border-color: #1565C0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  button{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
